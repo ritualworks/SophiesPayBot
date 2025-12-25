@@ -17,8 +17,13 @@ from telegram.ext import (
 import os
 import sys
 import asyncio
+import nest_asyncio
+nest_asyncio.apply()
+
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+app = ApplicationBuilder().token(BOT_TOKEN).build()
 
 # --- Command Handlers ---
 
@@ -135,8 +140,7 @@ async def set_commands(app):
 # --- Main ---
 
 async def main():
-    app = ApplicationBuilder().token(BOT_TOKEN).build()
-
+   
     # Register commands
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("buy", buy))
@@ -159,6 +163,12 @@ async def main():
     await app.run_polling()
 
 if __name__ == "__main__":
+    import asyncio
+    import nest_asyncio
+    nest_asyncio.apply()
+
     if sys.platform.startswith('win'):
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main())
+
+    app.run_polling()
+
