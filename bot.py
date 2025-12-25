@@ -12,10 +12,6 @@ from telegram.ext import (
 import asyncio
 import sys
 
-if __name__ == "__main__":
-    main()
-
-
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
