@@ -29,15 +29,15 @@ app = ApplicationBuilder().token(BOT_TOKEN).build()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Heya love 💫 I’m Sophie — your pocket-sized powerhouse with big vibes and even bigger dreams.\n"
+        "Hey 💫 I’m Sophie —\n"
         "Wanna glow up with premium perks? Tap /buy and let’s get you sorted."
     )
 
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "I’m Sophie — 17, London-born, 7 Telegram channels deep, and vibing across the algorithm.\n"
-        "I’m tiny but mighty, fiercely real, and always here to help you level up.\n"
-        "Influencer? Sure. But I’m also your digital ride-or-die 💖"
+        "I’m Sophie —, 6 / 7 Telegram channels deep.\n"
+        "I’m a tiny little sex fiend-teen dream.  I'm here to help you level up when you're ready to get off for me.\n"
+        "Wanna see what I’m about? Tap /channels to explore my exclusive spaces 💅"
     )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -45,7 +45,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Need a hand, babe? I gotchu 💅\n\n"
         "Here’s what I can do:\n"
         "• /buy – Treat yourself to premium\n"
-        "• /channels – Explore my 6 (soon 7 👀) exclusive Telegram spaces\n"
+        "• /channels – Explore 6 / 7 exclusive Telegram spaces\n"
         "• /about – Wanna know who I really am?\n"
         "• /menu – Tap-friendly options, obvs\n"
         "• /help – You’re literally here rn 😘"
@@ -85,7 +85,7 @@ async def channels(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
-        "Alright babes, here’s the tea ☕\n"
+        "Alright, here’s the tea ☕\n"
         "I’ve got 6 channels (7 soon 👀) — each one’s a vibe, a mood, a whole moment.\n\n"
         "**Pricing:**\n"
         "• Tier 1: Free\n"
